@@ -10,8 +10,8 @@ namespace LoadExcelToDB
     {
         private static SqlConnection connection;
 
-        private static string tableName         = "ap_extracts";
-        private static string detailsTableName  = "ap_extract_details";
+        private static string tableName         = "extracts";
+        private static string detailsTableName  = "extract_details";
 
         static void Main(string[] args)
         {
