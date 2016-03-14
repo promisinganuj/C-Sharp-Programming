@@ -45,7 +45,6 @@ namespace LoadExcelToDB
                     try
                     {
                         Thread newThread = new Thread(new ParameterizedThreadStart(loadFile));
-                        System.Collections.Hashtable parameters = new System.Collections.Hashtable();
 
                         FileParameter _f = new FileParameter {fileLocation = (string)dataReader["fileLocation"], fileName = (string)dataReader["fileName"]};
                         var x = String.Format("SELECT id, worksheetName, rowsSkipped, includeHeader FROM dbo.{0} where fileLocation = '{1}' and fileName = '{2}'", tableName, (string)dataReader["fileLocation"], (string)dataReader["fileName"]);
